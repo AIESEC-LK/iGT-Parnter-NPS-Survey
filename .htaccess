@@ -1,0 +1,21 @@
+<Files credentials.json>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+RewriteEngine on
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*?)/?$ $1.php
+RewriteCond %{HTTP_HOST} ^linkedin\.aiesec\.lk$
+RewriteRule ^/?$ "https\:\/\/linkedin\.aiesec\.lk\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^apply\.aiesec\.lk$
+RewriteRule ^/?$ "https\:\/\/apply\.aiesec\.lk\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
