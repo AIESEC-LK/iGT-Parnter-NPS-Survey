@@ -14,7 +14,7 @@ $base = "https://talent.aiesec.lk/";
 if ($_SERVER['SERVER_NAME'] == "localhost") {
 
 	// Change this if you are running on your machine
-	$base = "http://localhost/aiesec.lk/igt-partner-nps-survey/";
+	$base = "http://localhost/aiesec.lk/igt-nps-survey/";
 }
 
 $background = "background.jpg";

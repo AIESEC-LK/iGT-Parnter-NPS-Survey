@@ -1,13 +1,13 @@
-<Files credentials.json>
-    Order Deny,Allow
-    Deny from all
-</Files>
-
-RewriteEngine on
-#RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*?)/?$ $1.php
+<Files credentials.json>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+RewriteEngine on
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*?)/?$ $1.php
 RewriteCond %{HTTP_HOST} ^linkedin\.aiesec\.lk$
 RewriteRule ^/?$ "https\:\/\/linkedin\.aiesec\.lk\/" [R=301,L]
 RewriteCond %{HTTP_HOST} ^apply\.aiesec\.lk$
